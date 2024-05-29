@@ -1,0 +1,23 @@
+// Mongo Db
+insertOne({}) -// inserats a document
+db.createCollection // creates a collection
+db.createCollection("text", {capped: true, autoIndexID: true, size: 61723823,max:100})  //creates a collection to capped
+db.test.drop() //deletes the collection
+db.customer.find() //returns all the document in the customer
+
+// mongo stores as BSON format
+show collections // shows all clollections
+db.customer.insertOne({}) //inserts one document in customer collection
+db.customer.insertOne({_id:"unique-id"})//adds and rewrites the new _id automatically
+// if we add same unique id value then mongo will throw an error as duplicate key
+
+// what are the different ways to store
+db.customer.insertOne({"name":"john",age:32}) //inserts one document
+db.customer.find()//returns all documents in the colection
+db.customer.insertMany([{}, {}, {}]) //inserts many documents
+db.customer.find() //returns all documents in the collection
+db.customer.insert({}) //can be used to insert one or many documents
+
+
+
+
